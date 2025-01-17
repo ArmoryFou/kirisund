@@ -1,3 +1,11 @@
+# Change this path to your own audio path
+AUDIO_FOLDER = "your/audio/path"
+
+# Change this value to the amount of seconds
+# before playing audio after a pause
+AUDIO_PLAY_DELAY = 2
+
+## DON'T EDIT BELOW THIS LINE
 import time
 import random
 import os
@@ -10,8 +18,6 @@ import pygame
 pygame.mixer.init()
 
 CURRENT_PID = os.getpid()
-
-AUDIO_PLAY_DELAY = 2
 
 def is_audio_playing():
     sessions = AudioUtilities.GetAllSessions()
@@ -29,7 +35,7 @@ def is_audio_playing():
     return False
 
 def play_random_audio(folder_path):
-    audio_files = [f for f in os.listdir(folder_path) if f.endswith(('.mp3', '.wav'))]
+    audio_files = [f for f in os.listdir(folder_path) if f.endswith(('.mp3', '.ogg'))]
     if not audio_files:
         print("No audio files found in the specified folder.")
         return None
@@ -38,8 +44,6 @@ def play_random_audio(folder_path):
     pygame.mixer.music.load(os.path.join(folder_path, random_audio))
     pygame.mixer.music.play()
     return random_audio
-
-AUDIO_FOLDER = "audio//folder"
 
 random_audio_playing = False
 manual_audio_detected = False
