@@ -21,9 +21,19 @@ change the audio folder path for your own (the folder where you have the audio).
 AUDIO_FOLDER = "audio//folder"
 ```
 
-(optional) change the amount of seconds before playing audio after a pause
+(optional) change the amount of seconds before playing audio after a pause.
 ```
 AUDIO_PLAY_DELAY = 2
 ```
 
-A python script that plays audio when there is silence.
+
+> [!NOTE]
+> Only reproduces .mp3 and .ogg.
+
+
+## TO DO
+
+- [ ] Add a personalizable shortcut to pause and resume.
+- [ ] support for more formats .flac, .wav, etc.
+- [ ] change playlist order ascendent, descendent or random.
+- [ ] better interface.
