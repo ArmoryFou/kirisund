@@ -16,4 +16,9 @@ change the audio folder path for your own (the folder where you have the audio).
 AUDIO_FOLDER = "audio//folder"
 ```
 
+(optional) change the amount of seconds before playing audio after a pause
+```
+AUDIO_PLAY_DELAY = 2
+```
+
 A python script that plays audio when there is silence.
